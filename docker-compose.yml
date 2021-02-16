@@ -1,0 +1,10 @@
+version: "3.2"
+
+services:
+  qodana-convert:
+    build:
+      context: .
+    volumes:
+    - type: bind
+      source: ./data
+      target: /data
