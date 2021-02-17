@@ -1,9 +1,7 @@
-FROM python:slim-buster
-
-RUN pip install --no-cache-dir pandas fsspec
+FROM python:alpine
 
 RUN mkdir -p /app
 COPY convert-qodana-to-codeclimate.py /app/
 RUN chmod +x /app/convert-qodana-to-codeclimate.py
 
-CMD ["/app/convert-qodana-to-codeclimate.py"]
+CMD ["python","/app/convert-qodana-to-codeclimate.py"]

@@ -1,4 +1,3 @@
-import pandas as pd
 import json
 
 with open('/data/result-allProblems.json', 'r', encoding="cp866") as json_file:
