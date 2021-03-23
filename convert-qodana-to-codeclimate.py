@@ -40,4 +40,4 @@ for issue in qodana_issue_list:
     cc_issue_list.append(convert_to_code_climate_style(issue))
 
 with open('data/cc_issue_list.json', 'w') as outfile:
-    json.dump(cc_issue_list, outfile)
+    json.dump(cc_issue_list, outfile, indent=3)
