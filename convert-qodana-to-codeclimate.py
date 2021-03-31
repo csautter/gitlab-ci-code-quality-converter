@@ -11,6 +11,7 @@ def map_severity(severity):
         "DEPRECATION": "minor",
         "Weak Warning": "major",
         "Moderate": "major",
+        "Low": "major",
         "Warning": "critical",
         "High": "critical",
         "Error": "blocker",
