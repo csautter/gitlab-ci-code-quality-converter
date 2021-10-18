@@ -1,6 +1,6 @@
 import json
 
-with open('/data/result-allProblems.json', 'r', encoding="cp866") as json_file:
+with open('./result-allProblems.json', 'r', encoding="cp866") as json_file:
     data=json_file.read()
 
 qodana_issue_list = json.loads(data)['listProblem']
@@ -40,5 +40,5 @@ cc_issue_list = []
 for issue in qodana_issue_list:
     cc_issue_list.append(convert_to_code_climate_style(issue))
 
-with open('data/cc_issue_list.json', 'w') as outfile:
+with open('./cc_issue_list.json', 'w') as outfile:
     json.dump(cc_issue_list, outfile, indent=3)
